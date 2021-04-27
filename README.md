@@ -2,6 +2,8 @@
 
 This package simply builds on the official `@nuxtjs/auth` module, and adds in runtime config functionality. 
 
+**NOTE:** This package has been updated for v5 of the `@nuxtjs/auth` module, for `@nuxtjs/auth` v4 compatibility, check out version 1.x.
+
 ## Installation
 
 ```sh
@@ -30,10 +32,12 @@ You can then define your config in your `publicRuntimeConfig` and `privateRuntim
 module.exports = {
     publicRuntimeConfig: {
         auth: {
-            local: {
-                endpoints: {
-                    login: {
-                        url: `${ process.env.APP_URL }/api/auth/login`,
+            strategies: {
+                local: {
+                    endpoints: {
+                        login: {
+                            url: `${ process.env.APP_URL }/api/auth/login`,
+                        },
                     },
                 },
             },
