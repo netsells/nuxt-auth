@@ -1,6 +1,6 @@
 {
     "name": "@netsells/nuxt-auth",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Enhanced @nuxtjs/auth module with runtime config",
     "main": "lib/index.js",
     "license": "ISC",
