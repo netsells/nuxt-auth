@@ -1,11 +1,13 @@
-# @netsells/nuxt-auth
+# @netsells/nuxt-auth-v4
 
 This package simply builds on the official `@nuxtjs/auth` module, and adds in runtime config functionality. 
+
+**NOTE:** This package is for v4.x of `@nuxtjs/auth`, for v5.x please see [@netsells/nuxt-auth](https://www.npmjs.com/package/@netsells/nuxt-auth).
 
 ## Installation
 
 ```sh
-$ yarn add -D @netsells/nuxt-auth
+$ yarn add -D @netsells/nuxt-auth-v4
 ```
 
 ## Usage
@@ -17,7 +19,7 @@ Add the module to your nuxt config:
 ```js
 module.exports = {
     modules: [
-        '@netsells/nuxt-auth',
+        '@netsells/nuxt-auth-v4',
     ],
 };
 ```
@@ -30,10 +32,12 @@ You can then define your config in your `publicRuntimeConfig` and `privateRuntim
 module.exports = {
     publicRuntimeConfig: {
         auth: {
-            local: {
-                endpoints: {
-                    login: {
-                        url: `${ process.env.APP_URL }/api/auth/login`,
+            strategies: {
+                local: {
+                    endpoints: {
+                        login: {
+                            url: `${ process.env.APP_URL }/api/auth/login`,
+                        },
                     },
                 },
             },
