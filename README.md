@@ -7,7 +7,7 @@ This package simply builds on the official `@nuxtjs/auth` module, and adds in ru
 ## Installation
 
 ```sh
-$ yarn add -D @netsells/nuxt-auth-v4
+$ yarn add @netsells/nuxt-auth-v4
 ```
 
 ## Usage
